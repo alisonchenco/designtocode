@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title">
+  <title id="title">Components</title>
+  <rect width="240" height="360" fill="#315bd7"/>
+  <g fill="#ffa5cb">
+    <path d="M26 29h79v35a20 20 0 1 1 0 40v34H26V104a20 20 0 1 0 0-40z"/>
+    <path d="M135 29h79v35a20 20 0 1 0 0 40v34h-79V104a20 20 0 1 1 0-40z" transform="rotate(180 174 83)"/>
+    <path d="M26 151h79v35a20 20 0 1 0 0 40v34H26V226a20 20 0 1 1 0-40z"/>
+    <path d="M135 151h79v35a20 20 0 1 1 0 40v34h-79V226a20 20 0 1 0 0-40z"/>
+  </g>
+  <g fill="#fff5de" font-family="Arial, sans-serif" font-weight="900" font-size="40" letter-spacing="-1.5"><text x="17" y="307">COMPO</text><text x="17" y="347">NENTS</text></g>
+</svg>

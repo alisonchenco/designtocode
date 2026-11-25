@@ -1,0 +1,22 @@
+.directory-resources { gap: 24px; padding-block: 64px 88px; }
+.directory-heading { grid-column: 1 / -1; }
+.directory-heading h1 { font-size: clamp(22px, 2.6vw, 30px); line-height: 1.25; letter-spacing: -.65px; }
+.directory-heading p { margin: 0; max-width: 700px; font-size: 17px; line-height: 1.6; color: var(--ink); }
+.directory-poster { display: grid; place-items: center; aspect-ratio: 1 / 1; background: #f7f7f5; }
+.directory-poster img { display: block; width: 60%; height: 60%; object-fit: contain; }
+.directory-resources .card-copy { padding: 22px 0 0; }
+.directory-resources .card-copy h2 { margin: 0 0 12px; font-size: 18px; line-height: 1.4; letter-spacing: -.15px; }
+.directory-resources .card-copy h2 a { display: block; }
+.directory-resources .card-copy h2 a:hover { color: var(--blue); }
+.directory-resources .card-copy p { max-width: none; font-size: 17px; line-height: 1.6; color: var(--ink); }
+.directory-page .directory-link { text-decoration: underline; text-underline-offset: 5px; }
+
+@media (max-width: 1000px) {
+  .directory-resources { width: calc(100% - 48px); gap: 16px; }
+}
+@media (max-width: 829px) {
+  .directory-resources { grid-template-columns: 1fr; width: min(560px, calc(100% - 40px)); max-width: 560px; gap: 40px; }
+}
+@media (max-width: 620px) {
+  .directory-resources { padding-block: 40px 54px; }
+}

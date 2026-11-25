@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title">
+  <title id="title">Grid and space</title>
+  <rect width="240" height="360" fill="#b9a4e9"/>
+  <g fill="#fff34a"><rect x="19" y="23" width="57" height="57"/><rect x="91" y="23" width="57" height="57"/><rect x="163" y="23" width="57" height="57"/><rect x="19" y="95" width="57" height="57"/><rect x="163" y="95" width="57" height="57"/><rect x="19" y="167" width="57" height="57"/><rect x="91" y="167" width="57" height="57"/><rect x="163" y="167" width="57" height="57"/></g>
+  <path d="M91 95h57v57H91z" fill="none" stroke="#2c2142" stroke-width="2" stroke-dasharray="4 4"/>
+  <g fill="#2c2142" font-family="Arial, sans-serif" font-weight="900" font-size="45" letter-spacing="-2"><text x="17" y="286">GRID &amp;</text><text x="17" y="333">SPACE</text></g>
+</svg>

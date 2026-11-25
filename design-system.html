@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Edit your design tokens and see colors, typography, spacing, and corner radii reflected in live components.">
+  <title>Design system — design-to-code</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="design-system.css">
+  <script src="design-system.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="navigation container" aria-label="Main navigation">
+      <a class="wordmark" href="index.html"><img class="microsoft-mark" src="assets/microsoft-mark.svg" width="20" height="20" alt="Microsoft">design-to-code<span class="wordmark-dot" aria-hidden="true"></span></a>
+      <div class="nav-links">
+        <a href="index.html#guides">Practical guides</a>
+        <a class="design-system-link" href="design-system.html" aria-current="page">Design system</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main" class="container system-main">
+    <div class="system-heading">
+      <div>
+        <h1>A system you can shape.</h1>
+        <p>Edit the foundations. See the pieces come together.<br>Changes update this preview and save in this browser.</p>
+      </div>
+    </div>
+    <p class="system-notice" id="storage-notice" role="status" aria-live="polite">Your edits stay on this device. No account or upload needed.</p>
+    <div class="system-workspace">
+      <form class="token-panel" id="token-form" novalidate>
+        <div class="panel-heading"><h2>Foundations</h2></div>
+        <fieldset>
+          <legend>Color</legend>
+          <div class="color-field">
+            <label for="brand-hex">Brand <span>color.brand</span></label>
+            <div class="color-inputs"><input type="color" id="brand-picker" data-token="brand" aria-label="Pick brand color" value="#446dcc"><input id="brand-hex" data-token="brand" type="text" value="#446dcc" pattern="#[0-9a-fA-F]{6}" maxlength="7" spellcheck="false" aria-describedby="brand-error"></div>
+            <p class="field-error" id="brand-error"></p>
+          </div>
+          <div class="color-field">
+            <label for="text-hex">Text <span>color.text</span></label>
+            <div class="color-inputs"><input type="color" id="text-picker" data-token="text" aria-label="Pick text color" value="#2d302f"><input id="text-hex" data-token="text" type="text" value="#2d302f" pattern="#[0-9a-fA-F]{6}" maxlength="7" spellcheck="false" aria-describedby="text-error"></div>
+            <p class="field-error" id="text-error"></p>
+          </div>
+          <div class="color-field">
+            <label for="background-hex">Background <span>color.background</span></label>
+            <div class="color-inputs"><input type="color" id="background-picker" data-token="background" aria-label="Pick background color" value="#f5f6f4"><input id="background-hex" data-token="background" type="text" value="#f5f6f4" pattern="#[0-9a-fA-F]{6}" maxlength="7" spellcheck="false" aria-describedby="background-error"></div>
+            <p class="field-error" id="background-error"></p>
+          </div>
+          <div class="color-field">
+            <label for="surface-hex">Surface <span>color.surface</span></label>
+            <div class="color-inputs"><input type="color" id="surface-picker" data-token="surface" aria-label="Pick surface color" value="#ffffff"><input id="surface-hex" data-token="surface" type="text" value="#ffffff" pattern="#[0-9a-fA-F]{6}" maxlength="7" spellcheck="false" aria-describedby="surface-error"></div>
+            <p class="field-error" id="surface-error"></p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Typography</legend>
+          <label class="stacked-label" for="font-family">Font family <span>font.family</span></label>
+          <select id="font-family" data-token="fontFamily">
+            <option value="sans">Sans serif — clean &amp; simple</option>
+            <option value="serif">Serif — warm &amp; editorial</option>
+            <option value="mono">Monospace — precise &amp; technical</option>
+          </select>
+          <label class="number-field" for="font-size"><span>Base size <small>font.size</small></span><span class="number-input"><input id="font-size" data-token="fontSize" type="number" min="12" max="24" step="1" value="16" aria-describedby="fontSize-error"><span>px</span></span></label>
+          <p class="field-error" id="fontSize-error"></p>
+        </fieldset>
+        <fieldset>
+          <legend>Shape &amp; space</legend>
+          <label class="number-field" for="spacing"><span>Base spacing <small>space.base</small></span><span class="number-input"><input id="spacing" data-token="spacing" type="number" min="4" max="32" step="1" value="16" aria-describedby="spacing-error"><span>px</span></span></label>
+          <p class="field-error" id="spacing-error"></p>
+          <label class="number-field" for="radius"><span>Corner radius <small>radius.base</small></span><span class="number-input"><input id="radius" data-token="radius" type="number" min="0" max="24" step="1" value="8" aria-describedby="radius-error"><span>px</span></span></label>
+          <p class="field-error" id="radius-error"></p>
+        </fieldset>
+        <div class="token-actions">
+          <button type="button" id="export-tokens" class="system-button">Export tokens <span aria-hidden="true">↓</span></button>
+          <button type="button" id="reset-tokens" class="system-button secondary-system-button">Reset to defaults</button>
+        </div>
+        <p id="edit-status" class="edit-status" role="status" aria-live="polite">Ready to make it yours.</p>
+      </form>
+      <section class="preview-panel" aria-labelledby="preview-title">
+        <div class="panel-heading"><h2 id="preview-title">Live preview</h2></div>
+        <div class="component-preview" id="component-preview">
+          <div class="preview-intro"><h2>Component preview.</h2><p>See your tokens applied to cards, buttons, inputs, and typography.</p></div>
+          <article class="demo-card">
+            <div class="demo-card-icon" aria-hidden="true">✳</div>
+            <h3>Example card</h3>
+            <p>A reusable card with shared colors, type, spacing, and corners. Change a token and watch it update.</p>
+            <div class="demo-buttons">
+              <button class="demo-primary" id="demo-action" type="button">Try primary action <span aria-hidden="true">↗</span></button>
+              <button class="demo-secondary" id="demo-reset" type="button">Clear action</button>
+            </div>
+            <p class="demo-status" id="demo-status" role="status" aria-live="polite">Your component is ready to explore.</p>
+          </article>
+          <div class="demo-input-group"><label for="demo-input">Component name</label><input id="demo-input" type="text" placeholder="e.g. Product card" maxlength="80"><p>Try typing or focusing this field to explore the input.</p></div>
+          <div class="demo-type"><h3>Example heading</h3><p>Example body text using the base font size.</p><small>Example small text.</small></div>
+          <div class="demo-swatches" aria-label="Current color palette">
+            <div><span data-swatch="brand"></span><small>Brand</small></div>
+            <div><span data-swatch="text"></span><small>Text</small></div>
+            <div><span data-swatch="background"></span><small>Background</small></div>
+            <div><span data-swatch="surface"></span><small>Surface</small></div>
+          </div>
+        </div>
+        <p class="contrast-notice" id="contrast-notice" role="status" aria-live="polite"></p>
+        <div class="system-tip"><strong>Make intent reusable.</strong> Agree on semantic token names with your developers. Export your choices as JSON to start the conversation.</div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer container"><a class="wordmark" href="index.html">design-to-code<span class="wordmark-dot" aria-hidden="true"></span></a><a href="index.html">Back to the essentials <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

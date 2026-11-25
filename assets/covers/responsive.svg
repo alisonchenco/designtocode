@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title">
+  <title id="title">Responsive design</title>
+  <rect width="240" height="360" fill="#ff6a2b"/>
+  <g font-family="Arial, sans-serif" font-weight="900" font-size="41" letter-spacing="-2" fill="#211b19"><text x="16" y="56">RESPON</text><text x="16" y="97">SIVE</text></g>
+  <g stroke="#211b19" stroke-width="3" fill="#ffe9b1"><rect x="21" y="135" width="192" height="125"/><rect x="45" y="168" width="136" height="127"/><rect x="78" y="202" width="78" height="128"/></g>
+  <g fill="#ff6a2b"><rect x="91" y="220" width="52" height="41"/><rect x="91" y="273" width="52" height="7"/><rect x="91" y="288" width="38" height="7"/></g>
+</svg>

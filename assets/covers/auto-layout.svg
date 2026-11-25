@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title">
+  <title id="title">Auto layout</title>
+  <rect width="240" height="360" fill="#ff78b7"/>
+  <g fill="#171717" font-family="Arial, sans-serif" font-weight="900" font-size="53" letter-spacing="-3">
+    <text x="17" y="63">AUTO</text><text x="17" y="113">LAYOUT</text>
+  </g>
+  <g fill="#f4f54a"><rect x="19" y="151" width="202" height="33"/><rect x="19" y="197" width="92" height="124"/><rect x="124" y="197" width="97" height="55"/><rect x="124" y="265" width="97" height="56"/></g>
+  <path d="M12 142H229M12 332H229M12 142V332M229 142V332" stroke="#171717" stroke-dasharray="3 5" fill="none"/>
+</svg>

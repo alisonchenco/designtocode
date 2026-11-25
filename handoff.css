@@ -1,0 +1,56 @@
+.handoff-levels { --level-gap: 24px; --diagram-blue: #2451da; gap: var(--level-gap); }
+.handoff-poster { display: block; aspect-ratio: 1 / 1; background: #f7f7f5; container-type: inline-size; }
+.handoff-poster svg { display: block; width: 100%; height: auto; fill: var(--diagram-blue); font: 27px ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+/* Compensate for the SVG viewBox so rendered labels stay at least 13.5px. */
+.handoff-poster svg { font-size: clamp(13.5px, calc(43.74px - 5.4cqw), 30.24px); }
+.diagram-shape { fill: none; stroke: var(--diagram-blue); stroke-width: 1.25px; vector-effect: non-scaling-stroke; stroke-linejoin: round; stroke-linecap: round; }
+.diagram-paper { fill: #fff; }
+.diagram-tint { fill: color-mix(in srgb, var(--diagram-blue) 15%, white); }
+.diagram-accent { fill: var(--diagram-blue); }
+.diagram-dashed { stroke-dasharray: 5 5; }
+.handoff-levels .card-copy { padding: 22px 0 0; }
+.handoff-levels .level-number { position: relative; font: 14px/1.4 ui-monospace, "SFMono-Regular", Consolas, monospace; color: var(--ink); margin: 0 0 14px; max-width: none; }
+.handoff-levels .card-copy h3 { font-size: 18px; line-height: 1.4; margin-bottom: 12px; }
+.handoff-levels .card-copy > p:not(.level-number) { font-size: 17px; line-height: 1.6; color: var(--ink); max-width: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .diagram-motion { transition: transform 480ms cubic-bezier(.2, .7, .2, 1); }
+  .diagram-layer-top { --diagram-expansion: translateY(-24px); }
+  .diagram-layer-middle { --diagram-expansion: translateY(-12px); }
+  .diagram-note-top { --diagram-expansion: translateY(-16.8px); }
+  .diagram-note-middle { --diagram-expansion: translateY(-8.4px); }
+  .diagram-guides { --diagram-expansion: scaleY(1.065); transform-origin: 0 464px; }
+  .handoff-poster.is-entering .diagram-motion { animation: handoff-expand 1800ms ease-in-out; }
+  .handoff-poster:focus-visible .diagram-motion { animation: none; transform: var(--diagram-expansion); }
+  @keyframes handoff-expand {
+    0%, 100% { transform: none; }
+    35%, 65% { transform: var(--diagram-expansion); }
+  }
+}
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
+  .handoff-poster:hover .diagram-motion { animation: none; transform: var(--diagram-expansion); }
+}
+
+.ai-handoff { scroll-margin-top: 30px; }
+.ai-handoff .guide-content ol { padding-left: 17px; }
+.ai-code { border: 1px solid var(--line); background: var(--panel); border-radius: 6px; overflow: hidden; }
+.ai-code-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; border-bottom: 1px solid var(--line); }
+.ai-code-toolbar > span { font: 15px ui-monospace, "SFMono-Regular", Consolas, monospace; }
+.copy-rules { min-height: 44px; border: 1px solid var(--ink); padding: 8px 14px; border-radius: 4px; color: var(--ink); background: #fff; cursor: pointer; }
+.copy-rules:hover { background: var(--panel); }
+.copy-rules:disabled { cursor: wait; }
+.ai-code pre { margin: 0; padding: 20px; font: 16px/1.65 ui-monospace, "SFMono-Regular", Consolas, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+.ai-code code { font: inherit; color: var(--ink); }
+.ai-handoff .copy-rules-status { margin: 10px 0 12px; min-height: 1.6em; }
+.copy-rules-status[data-state="error"] { color: #a03425; }
+
+@media (max-width: 1000px) {
+  .handoff-levels { --level-gap: 16px; width: calc(100% - 48px); }
+}
+@media (max-width: 829px) {
+  .handoff-levels { grid-template-columns: 1fr; width: min(560px, calc(100% - 40px)); max-width: 560px; gap: 40px; }
+}
+@media (max-width: 620px) {
+  .ai-code-toolbar { padding-inline: 14px; gap: 10px; }
+  .ai-code pre { padding: 16px; }
+}

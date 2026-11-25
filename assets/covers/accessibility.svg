@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title">
+  <title id="title">Accessibility</title>
+  <rect width="240" height="360" fill="#145b3f"/>
+  <g fill="#f5ecd5" font-family="Arial, sans-serif" font-weight="900" font-size="45" letter-spacing="-1.5"><text x="15" y="57">ACCESS</text><text x="15" y="102">IBILITY</text></g>
+  <circle cx="120" cy="229" r="85" fill="none" stroke="#ff9fc4" stroke-width="29"/>
+  <path d="M76 213h88M120 200v62M120 237l-30 41M120 237l30 41" stroke="#f5ecd5" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="120" cy="180" r="12" fill="#f5ecd5"/>
+</svg>

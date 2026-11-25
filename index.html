@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practical guidance for designers on structured layouts, reusable components, and thoughtful handoffs that translate beautifully into code.">
+  <meta name="theme-color" content="#ffffff">
+  <title>design-to-code — A guide for designers</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="handoff.css">
+  <script src="script.js" defer></script>
+  <script src="books.js" defer></script>
+</head>
+<body class="learning-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="navigation container" aria-label="Main navigation">
+      <a class="wordmark" href="#top" aria-label="Microsoft design-to-code home"><img class="microsoft-mark" src="assets/microsoft-mark.svg" width="20" height="20" alt="Microsoft">design-to-code<span class="wordmark-dot" aria-hidden="true"></span></a>
+      <div class="nav-links">
+        <a href="#principles">The essentials</a>
+        <a href="#guides">Practical guides</a>
+        <a class="directory-link" href="directory.html">Directory</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="introduction container" id="top" aria-labelledby="hero-title">
+      <h1 id="hero-title" class="animated-title">
+        <span class="visually-hidden">design to code</span>
+        <span class="hero-words" aria-hidden="true">
+          <span class="hero-word hero-word-design">design</span>
+          <span class="hero-word hero-word-to">to</span>
+          <span class="hero-word hero-word-code">code</span>
+        </span>
+      </h1>
+      <p class="hero-description">Bridge the space between what you design and what gets built.<br class="desktop-break"> A little structure. A shared language. A much smoother handoff.</p>
+    </section>
+
+    <section class="cover-gallery" aria-label="Design-to-code visual library">
+      <div class="cover-gallery-grid container">
+        <figure class="cover-tile"><button class="cover-button" type="button" data-book="auto-layout" aria-label="Open Auto layout"><span class="book-cover"><img src="assets/covers/auto-layout.svg" width="240" height="360" alt="Auto layout: structured rows, columns, and spacing"></span></button></figure>
+        <figure class="cover-tile"><button class="cover-button" type="button" data-book="design-tokens" aria-label="Open Design tokens"><span class="book-cover"><img src="assets/covers/design-tokens.svg" width="240" height="360" alt="Design tokens: shared colors and visual foundations"></span></button></figure>
+        <figure class="cover-tile"><button class="cover-button" type="button" data-book="components" aria-label="Open Components"><span class="book-cover"><img src="assets/covers/components.svg" width="240" height="360" alt="Components: reusable interface building blocks"></span></button></figure>
+        <figure class="cover-tile"><button class="cover-button" type="button" data-book="responsive" aria-label="Open Responsive design"><span class="book-cover"><img src="assets/covers/responsive.svg" width="240" height="360" alt="Responsive design: layouts that adapt to different screens"></span></button></figure>
+        <figure class="cover-tile"><button class="cover-button" type="button" data-book="content-first" aria-label="Open Content first"><span class="book-cover"><img src="assets/covers/content-first.svg" width="240" height="360" alt="Content first: design with realistic text and imagery"></span></button></figure>
+        <figure class="cover-tile"><button class="cover-button" type="button" data-book="interaction-states" aria-label="Open Interaction states"><span class="book-cover"><img src="assets/covers/interaction-states.svg" width="240" height="360" alt="Interaction states: show how controls behave"></span></button></figure>
+        <figure class="cover-tile"><button class="cover-button" type="button" data-book="accessibility" aria-label="Open Accessibility"><span class="book-cover"><img src="assets/covers/accessibility.svg" width="240" height="360" alt="Accessibility: make interfaces work for everyone"></span></button></figure>
+        <figure class="cover-tile"><button class="cover-button" type="button" data-book="clear-handoff" aria-label="Open Clear handoff"><span class="book-cover"><img src="assets/covers/clear-handoff.svg" width="240" height="360" alt="Clear handoff: communicate intent to developers"></span></button></figure>
+        <figure class="cover-tile"><button class="cover-button" type="button" data-book="grid-space" aria-label="Open Grid and space"><span class="book-cover"><img src="assets/covers/grid-space.svg" width="240" height="360" alt="Grid and space: organize visual relationships"></span></button></figure>
+        <figure class="cover-tile"><button class="cover-button" type="button" data-book="design-systems" aria-label="Open Design systems"><span class="book-cover"><img src="assets/covers/design-systems.svg" width="240" height="360" alt="Design systems: connected components and conventions"></span></button></figure>
+        <figure class="cover-tile"><button class="cover-button" type="button" data-book="build-together" aria-label="Open Build together"><span class="book-cover"><img src="assets/covers/build-together.svg" width="240" height="360" alt="Build together: review the implementation collaboratively"></span></button></figure>
+      </div>
+    </section>
+
+    <dialog class="book-reader" id="book-reader" aria-labelledby="reader-title" aria-describedby="reader-intro">
+      <div class="reader-toolbar"><button id="close-reader" class="reader-close" type="button" autofocus>Close <span aria-hidden="true">×</span></button></div>
+      <div class="reader-spread">
+        <div class="reader-cover-page"><img id="reader-cover" width="240" height="360" alt=""></div>
+        <div class="reader-content">
+          <h2 id="reader-title"></h2>
+          <p id="reader-intro"></p>
+          <h3>Put it into practice</h3>
+          <ul id="reader-lessons"></ul>
+          <div class="reader-exercise"><h3>Try it in your next design</h3><p id="reader-exercise"></p></div>
+        </div>
+      </div>
+    </dialog>
+
+    <section class="guides container" id="guides" aria-labelledby="guides-title">
+      <div class="section-heading">
+        <h2 id="guides-title">Design-to-code essentials</h2>
+        <p>Practical steps for layouts, reusable components,<br>and responsive handoffs.</p>
+      </div>
+      <div class="guide-list">
+        <details class="guide" id="layout-guide">
+          <summary><span class="guide-number">01</span><span>Give your layouts a little logic.</span><span class="expand-icon" aria-hidden="true"></span></summary>
+          <div class="guide-content">
+            <p>A layout should explain how elements relate, not just where they sit in one screenshot.</p>
+            <ul>
+              <li>Use auto layout for rows, stacks, and repeated content. Define padding, gaps, alignment, and wrapping instead of positioning every element manually.</li>
+              <li>Choose fixed, fill, or content-sized dimensions intentionally. Show what grows when text wraps and what stays aligned.</li>
+              <li>Name layers by their role, such as Product card or Primary action, and keep the hierarchy close to the interface's structure.</li>
+            </ul>
+            <p class="try-it"><strong>Try this:</strong> Replace a short heading with a long one. Does the card grow naturally without overlapping its neighbors?</p>
+          </div>
+        </details>
+        <details class="guide" id="components-guide">
+          <summary><span class="guide-number">02</span><span>Turn repeated decisions into a system.</span><span class="expand-icon" aria-hidden="true"></span></summary>
+          <div class="guide-content">
+            <p>Consistency works best when design and code share the same building blocks.</p>
+            <ul>
+              <li>Use components for repeated patterns. Define variants for meaningful differences, such as size and state, instead of detaching every instance.</li>
+              <li>Use semantic tokens for colors, type, spacing, and radii. A name like <code>color.text.secondary</code> communicates intent better than a hex value.</li>
+              <li>Agree on component and token names with developers. Check the existing code library before designing a new version of something it already supports.</li>
+            </ul>
+            <p class="try-it"><strong>Try this:</strong> Change your primary color token. Every primary action should update without editing individual screens.</p>
+          </div>
+        </details>
+        <details class="guide" id="handoff-guide">
+          <summary><span class="guide-number">03</span><span>Design the in-between, too.</span><span class="expand-icon" aria-hidden="true"></span></summary>
+          <div class="guide-content">
+            <p>The happy path is only one part of a working interface. Make the rest explicit.</p>
+            <ul>
+              <li>Show narrow and wide layouts, then describe what stacks, wraps, hides, or scrolls between them. Choose breakpoints based on when content stops fitting.</li>
+              <li>Include focus, hover, disabled, loading, empty, error, and success states where relevant. Note keyboard behavior, labels, and accessible contrast.</li>
+              <li>Use realistic content, including long text and missing images. Document interactions, export required assets, and review the built page together.</li>
+            </ul>
+            <p class="try-it"><strong>Try this:</strong> Walk through the interface using only a keyboard. Can you reach every action and always tell where focus is?</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="principles container handoff-levels" id="principles" aria-labelledby="levels-title">
+      <h2 class="principles-title" id="levels-title">Three levels of a good handoff</h2>
+      <article class="principle">
+        <a class="handoff-poster structure-poster" href="#layout-guide" aria-label="Read the guide to structured layouts">
+          <svg viewBox="0 0 560 560" role="img" aria-labelledby="structure-art-title structure-art-desc">
+            <title id="structure-art-title">Exploded diagram of a structured UI card</title>
+            <desc id="structure-art-desc">Blue axonometric layers separate the card's content, padding and gaps, and auto layout frame. Dashed alignment guides connect the layers.</desc>
+            <rect class="handoff-canvas" width="560" height="560" fill="#f7f7f5" aria-hidden="true"/>
+            <defs>
+              <symbol id="handoff-ui-plane" viewBox="0 0 360 198" overflow="visible">
+                <path class="diagram-shape diagram-tint" d="M0 110 150 190 360 80V88L150 198 0 118Z"/>
+                <path class="diagram-shape diagram-paper" d="M0 110 210 0 360 80 150 190Z"/>
+              </symbol>
+              <symbol id="handoff-ui-content" viewBox="0 0 360 198" overflow="visible">
+                <use href="#handoff-ui-plane" width="360" height="198"/>
+                <path class="diagram-shape" d="M39 109 165 43M57 118 162 63M69 124 153 80"/>
+                <path class="diagram-shape diagram-tint" d="M81 131 249 43 299 69 131 157Z"/>
+                <path class="diagram-shape" d="M112 130 145 112 178 130 236 81 272 86"/>
+                <path class="diagram-shape diagram-accent" d="M149 167 317 79 333 88 165 176Z"/>
+              </symbol>
+              <symbol id="handoff-alignment" viewBox="0 0 560 560" overflow="visible">
+                <path class="diagram-shape diagram-dashed" d="M184 166V200M184 250V406M324 92V332M424 145V250M424 330V386M284 219V459"/>
+              </symbol>
+            </defs>
+            <g class="poster-artwork">
+              <g class="diagram-layers" transform="translate(67.2 93.4) scale(.7)">
+                <g class="diagram-motion diagram-guides">
+                  <use href="#handoff-alignment" width="560" height="560"/>
+                </g>
+                <use data-primary-card href="#handoff-ui-plane" x="184" y="332" width="240" height="132"/>
+                <g class="diagram-motion diagram-layer-middle">
+                  <use href="#handoff-ui-plane" x="184" y="212" width="240" height="132"/>
+                  <g transform="translate(184 212) scale(.6666667)">
+                    <path class="diagram-shape diagram-tint" d="M0 110 210 0 224 8 14 118ZM150 190 360 80 346 72 136 182Z"/>
+                    <path class="diagram-shape diagram-dashed" d="M28 110 210 15 332 80 150 175Z"/>
+                    <path class="diagram-shape" d="M91 133 259 45M104 140 272 52"/>
+                  </g>
+                </g>
+                <g class="diagram-motion diagram-layer-top">
+                  <use href="#handoff-ui-content" x="184" y="92" width="240" height="132"/>
+                </g>
+              </g>
+              <g class="diagram-motion diagram-note-top">
+                <path class="diagram-shape" d="M256 134H294V157.8"/>
+                <text x="112" y="142">CONTENT</text>
+              </g>
+              <g class="diagram-motion diagram-note-middle">
+                <path class="diagram-shape" d="M162 272H249.2V267.7M320 318H312.2V282.4"/>
+                <text x="112" y="280">24</text>
+                <text x="448" y="326" text-anchor="end">gap:16</text>
+              </g>
+              <path class="diagram-shape" d="M330 434H364V362.9"/>
+              <text x="112" y="442">Auto layout</text>
+            </g>
+          </svg>
+        </a>
+        <div class="card-copy">
+          <p class="level-number" aria-label="Level 1">01</p>
+          <h3><a href="#layout-guide">Build with structure, not guesswork.</a></h3>
+          <p>Use auto layout to define padding, gaps, and how the card grows. Test long titles before you hand it off.</p>
+        </div>
+      </article>
+      <article class="principle">
+        <a class="handoff-poster tokens-poster" href="#components-guide" aria-label="Read the guide to components and design tokens">
+          <svg viewBox="0 0 560 560" role="img" aria-labelledby="tokens-art-title tokens-art-desc">
+            <title id="tokens-art-title">Exploded diagram of components and shared tokens</title>
+            <desc id="tokens-art-desc">The same blue UI assembly separates a reusable component, its heading and brand tokens, and a shared base with a radius token.</desc>
+            <rect class="handoff-canvas" width="560" height="560" fill="#f7f7f5" aria-hidden="true"/>
+            <g class="poster-artwork">
+              <g class="diagram-layers" transform="translate(67.2 93.4) scale(.7)">
+                <g class="diagram-motion diagram-guides">
+                  <use href="#handoff-alignment" width="560" height="560"/>
+                </g>
+                <use data-primary-card href="#handoff-ui-plane" x="184" y="332" width="240" height="132"/>
+                <g class="diagram-motion diagram-layer-middle">
+                  <use href="#handoff-ui-plane" x="184" y="212" width="240" height="132"/>
+                  <g transform="translate(184 212) scale(.6666667)">
+                    <path class="diagram-shape" d="M39 109 165 43M57 118 162 63M69 124 153 80"/>
+                    <path class="diagram-shape diagram-accent" d="M98 139 245 62 274 77 127 154Z"/>
+                    <path class="diagram-shape diagram-tint" d="M140 166 287 89 312 102 165 179Z"/>
+                  </g>
+                </g>
+                <g class="diagram-motion diagram-layer-top">
+                  <use href="#handoff-ui-content" x="184" y="92" width="240" height="132"/>
+                </g>
+              </g>
+              <g class="diagram-motion diagram-note-top">
+                <path class="diagram-shape" d="M280 156V173L340.2 201.2"/>
+                <text x="280" y="142" text-anchor="middle">Button / Primary</text>
+              </g>
+              <g class="diagram-motion diagram-note-middle">
+                <path class="diagram-shape" d="M242 252H256V262.1H267.4M320 318H312.2V299.2"/>
+                <text x="112" y="228"><tspan>text.</tspan><tspan x="112" dy="32">heading</tspan></text>
+                <text x="448" y="326" text-anchor="end"><tspan>color.</tspan><tspan x="448" dy="28">brand</tspan></text>
+              </g>
+              <path class="diagram-shape" d="M294 434H364V362.9"/>
+              <text x="112" y="442">radius.md</text>
+            </g>
+          </svg>
+        </a>
+        <div class="card-copy">
+          <p class="level-number" aria-label="Level 2">02</p>
+          <h3><a href="#components-guide">Create a language you both speak.</a></h3>
+          <p>Name colors, type, and radii with shared tokens. Match each component variant to a prop in code.</p>
+        </div>
+      </article>
+      <article class="principle">
+        <a class="handoff-poster states-poster" href="#handoff-guide" aria-label="Read the guide to responsive behavior and handoff">
+          <svg viewBox="0 0 560 560" role="img" aria-labelledby="states-art-title states-art-desc">
+            <title id="states-art-title">Exploded diagram of states and responsive behavior</title>
+            <desc id="states-art-desc">Blue layers show the same card in default, hover with a cursor, and empty states. A narrow mobile layout sits beside the assembly with its own annotation.</desc>
+            <rect class="handoff-canvas" width="560" height="560" fill="#f7f7f5" aria-hidden="true"/>
+            <g class="poster-artwork">
+              <g class="diagram-layers" transform="translate(67.2 93.4) scale(.7)">
+                <g class="diagram-motion diagram-guides">
+                  <use href="#handoff-alignment" width="560" height="560"/>
+                </g>
+                <use data-primary-card href="#handoff-ui-plane" x="184" y="332" width="240" height="132"/>
+                <g transform="translate(184 332) scale(.6666667)">
+                  <path class="diagram-shape" d="M39 109 165 43M57 118 162 63M69 124 153 80"/>
+                  <path class="diagram-shape diagram-dashed" d="M81 131 249 43 299 69 131 157Z"/>
+                  <path class="diagram-shape" d="M149 167 317 79 333 88 165 176Z"/>
+                </g>
+                <g class="diagram-motion diagram-layer-middle">
+                  <use href="#handoff-ui-content" x="184" y="212" width="240" height="132"/>
+                  <path class="diagram-shape diagram-paper" d="m350 286 8 26 6-10 11-3z"/>
+                </g>
+                <g class="diagram-motion diagram-layer-top">
+                  <use href="#handoff-ui-content" x="184" y="92" width="240" height="132"/>
+                </g>
+                <path class="diagram-shape diagram-paper" d="M446 382 478 364 512 413 480 431Z"/>
+                <path class="diagram-shape" d="M453 383 475 371M458 390 480 378"/>
+                <path class="diagram-shape diagram-tint" d="M462 396 484 384 499 405 477 417Z"/>
+                <path class="diagram-shape diagram-accent" d="M480 421 502 409 506 414 484 426Z"/>
+              </g>
+              <g class="diagram-motion diagram-note-top">
+                <path class="diagram-shape" d="M256 134H294V157.8"/>
+                <text x="112" y="142">default</text>
+              </g>
+              <g class="diagram-motion diagram-note-middle">
+                <path class="diagram-shape" d="M220 262H242L268.8 278.9"/>
+                <text x="112" y="270">hover</text>
+              </g>
+              <path class="diagram-shape" d="M220 434H364V362.9M400 403.1L403.2 395.1"/>
+              <text x="112" y="442">empty</text>
+              <text x="448" y="424" text-anchor="end">mobile</text>
+            </g>
+          </svg>
+        </a>
+        <div class="card-copy">
+          <p class="level-number" aria-label="Level 3">03</p>
+          <h3><a href="#handoff-guide">Make the details part of the design.</a></h3>
+          <p>Show default, hover, and empty states. Define what changes on a narrow screen so the build is not left to guesswork.</p>
+        </div>
+      </article>
+    </section>
+    <section class="guides ai-handoff container" id="ai-handoff" aria-labelledby="ai-handoff-title">
+      <div class="section-heading">
+        <h2 id="ai-handoff-title">AI handoff</h2>
+        <p>Levels 1 to 3 get your file right. Guardrails keep AI-generated code true to it.</p>
+      </div>
+      <div class="guide-list">
+        <details class="guide" id="ai-why">
+          <summary><span class="guide-number">01</span><span>Why it matters</span><span class="expand-icon" aria-hidden="true"></span></summary>
+          <div class="guide-content">
+            <p>AI coding tools copy whatever structure you give them. A messy file gets messy code, faster. Guardrails make the model follow your system instead of improvising.</p>
+          </div>
+        </details>
+        <details class="guide" id="ai-design">
+          <summary><span class="guide-number">02</span><span>What you own</span><span class="expand-icon" aria-hidden="true"></span></summary>
+          <div class="guide-content">
+            <ul>
+              <li>Auto layout and variables in the Figma file.</li>
+              <li>Component variants that match the props in code.</li>
+              <li>Code Connect mappings between Figma components and code.</li>
+              <li>A one-line use when / don't use when note on each component.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="guide" id="ai-engineering">
+          <summary><span class="guide-number">03</span><span>What to ask engineering for</span><span class="expand-icon" aria-hidden="true"></span></summary>
+          <div class="guide-content">
+            <ul>
+              <li>A rules file at the repo root, such as <code>CLAUDE.md</code> or <code>AGENTS.md</code>, or project rules in <code>.cursor/rules</code>.</li>
+              <li>Tokens exported as code, with shared names for colors, spacing, and type.</li>
+              <li>Lint rules that ban hardcoded colors and spacing, with violations failing the build in CI.</li>
+              <li>A Tailwind theme or configuration locked to those tokens.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="guide" id="ai-workflow">
+          <summary><span class="guide-number">04</span><span>Working with the agent</span><span class="expand-icon" aria-hidden="true"></span></summary>
+          <div class="guide-content">
+            <ol>
+              <li>Work on one frame at a time.</li>
+              <li>Ask for a plan listing components and gaps before it codes.</li>
+              <li>Have it screenshot its output and compare it to the Figma frame.</li>
+              <li>Review every change as a pull request.</li>
+            </ol>
+          </div>
+        </details>
+        <details class="guide" id="ai-code-guide">
+          <summary><span class="guide-number">05</span><span>In code</span><span class="expand-icon" aria-hidden="true"></span></summary>
+          <div class="guide-content">
+            <p>Use this sample as a starting point for <code>CLAUDE.md</code>. Adapt the paths and token names to your repository.</p>
+            <div class="ai-code">
+              <div class="ai-code-toolbar"><span>CLAUDE.md</span><button class="copy-rules" id="copy-ai-rules" type="button" aria-describedby="copy-ai-rules-status">Copy rules</button></div>
+              <pre><code id="ai-rules"># UI implementation rules
+Use only components from /components/ui.
+Use the design tokens exported from tokens.ts.
+Never hardcode colors, spacing, or font sizes.
+Match component variants to documented props.
+If no component fits, stop and ask.
+Do not use inline styles.
+Do not add dependencies without asking.
+Implement one Figma frame at a time.
+Before coding, list the components and gaps in a plan.
+Screenshot the result and compare it with the Figma frame.
+Submit every change for review as a pull request.</code></pre>
+            </div>
+            <p class="copy-rules-status" id="copy-ai-rules-status" role="status" aria-live="polite"></p>
+            <p class="try-it"><strong>Try this:</strong> Give the same Figma frame to an AI tool with and without the rules file. Compare which components and values each version used.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer container">
+    <a class="wordmark" href="#top">design-to-code<span class="wordmark-dot" aria-hidden="true"></span></a>
+  </footer>
+</body>
+</html>

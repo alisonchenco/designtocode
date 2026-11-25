@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title">
+  <title id="title">Design tokens</title>
+  <rect width="240" height="360" fill="#dff04b"/>
+  <text x="17" y="56" font-family="Georgia, serif" font-size="43" fill="#1b2f25">Design</text>
+  <text x="15" y="101" font-family="Georgia, serif" font-size="47" fill="#1b2f25">tokens</text>
+  <g transform="translate(120 229)">
+    <circle r="93" fill="#1b684d"/>
+    <circle cx="-34" cy="-25" r="37" fill="#ff8dbb"/><circle cx="34" cy="-25" r="37" fill="#ffba39"/>
+    <circle cx="-34" cy="42" r="37" fill="#5583ed"/><circle cx="34" cy="42" r="37" fill="#f7f1df"/>
+  </g>
+</svg>

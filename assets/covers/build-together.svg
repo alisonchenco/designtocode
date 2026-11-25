@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title">
+  <title id="title">Build together</title>
+  <rect width="240" height="360" fill="#ffd0df"/>
+  <g fill="#264bc4" font-family="Georgia, serif" font-size="44"><text x="19" y="53">Build</text><text x="17" y="97" font-size="36" font-style="italic">together.</text></g>
+  <path d="M52 226a69 69 0 0 1 117-49M188 229a69 69 0 0 1-117 49" fill="none" stroke="#264bc4" stroke-width="24"/>
+  <path d="m137 147 47 17-14 45M103 309l-47-17 14-45" fill="none" stroke="#264bc4" stroke-width="24" stroke-linejoin="miter"/>
+  <path d="m96 227 16 16 33-34" fill="none" stroke="#e64d30" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

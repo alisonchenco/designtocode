@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title">
+  <title id="title">Interaction states</title>
+  <rect width="240" height="360" fill="#ffe13e"/>
+  <g font-family="Arial, sans-serif" font-weight="900" fill="#211f20" font-size="36" letter-spacing="-1.7"><text x="15" y="50">INTER</text><text x="15" y="87">ACTION</text><text x="15" y="124">STATES</text></g>
+  <g stroke="#211f20" stroke-width="2" fill="none"><circle cx="126" cy="235" r="35"/><circle cx="126" cy="235" r="67"/><circle cx="126" cy="235" r="100"/></g>
+  <path d="m91 175 14 132 28-41 46 17 13-30-47-16 35-26z" fill="#ff659b" stroke="#211f20" stroke-width="3"/>
+</svg>

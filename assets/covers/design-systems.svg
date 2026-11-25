@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360" role="img" aria-labelledby="title">
+  <title id="title">Design systems</title>
+  <rect width="240" height="360" fill="#252524"/>
+  <g fill="#f1e9d1" font-family="Arial, sans-serif" font-weight="900" font-size="41" letter-spacing="-2"><text x="15" y="56">DESIGN</text><text x="15" y="98">SYSTEMS</text></g>
+  <g fill="#f1e9d1"><circle cx="70" cy="182" r="43"/><path d="M128 139h86v86h-86z"/><path d="M27 241h86v86H27z"/></g>
+  <path d="M128 327V241h86v86z" fill="#fd8240"/>
+  <circle cx="171" cy="284" r="26" fill="#252524"/>
+  <path d="M128 182h86M70 241v86" stroke="#252524" stroke-width="8"/>
+</svg>
